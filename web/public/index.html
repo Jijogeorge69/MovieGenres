@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Film genres</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="stylesheets/util.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<script type="text/javascript" src="javascripts/films.js"></script>
+</head>
+
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+                
+				<form class="login100-form validate-form p-l-55 p-r-55 p-t-160" onsubmit="return API.login()"
+					id="loginForm">
+					<span class="login100-form-title">
+						Movie Genres
+					</span>
+					<div id="lg_username">
+						<label for="username"><b>Username: -</b></label>
+					</div>
+					<div class="labellogin1">
+					<label id="login_success"></label>
+				    </div>
+					<div class="wrap-input100 validate-input m-b-16" id="lg_gettext" data-validate="username val">
+						<input class="input100" type="text" name="username" id="logintext">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn" id="lg_btn">
+						<input class="login100-form-btn" style="margin:5px;" type="submit" id="loginbtn"
+							value="Login"></input>
+					</div>
+					<!-- <br>
+					
+					<div class="alertMsg" id="alertLoginSucess" style="display: none;">!!!!!! Token generated your login was sucessful !!!!!!</div> -->
+					<!-- <br> -->
+					<hr />
+
+				</form>
+				<form class="login100-form p-l-55 p-r-55 p-t-30" onsubmit="return API.createFilm()"
+					id="myForm">
+					<div>
+						<label for="title"><b>Film Title: -</b></label>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate="film title">
+						<input class="input100" type="text" name="tittle" id="text1">
+						<span class="focus-input100"></span>
+					</div>
+					<div>
+						<label for="starrating"><b>Rating: -</b></label>
+					</div>
+					<div class="stars" data-rating="0" id="resetStars">
+						<span class="star"></span>
+						<span class="star"></span>
+						<span class="star"></span>
+						<span class="star"></span>												
+					</div>&nbsp;
+					<!-- <div class="stars">&nbsp;</div> -->
+
+					<div class="container-login100-form-btn">
+						<input class="login100-form-btn" style="margin:5px;" type="submit" id="button1"
+							value="Add"></input>
+					</div>
+				</form>
+				<div class="limiter">
+					<form class="login100-form p-l-58 p-r-58 p-t-20" onsubmit="return API.getFilm()">
+						<input class="login100-form-btn" style="margin:5px;" type="submit" id="button2"
+							value="Display"></input>
+						<hr />
+
+						<body>
+							<!-- <body onload="return API.hideTable()"> -->
+							<table id='tab1' style="display: none;">
+								<thead id="table-head" style="vertical-align:right">
+									<tr>
+										<th>Film Title</th>
+										<th>Rating</th>
+										<th>Options</th>
+									</tr>
+								</thead>
+								<tbody id="table-body">
+								</tbody>
+							</table>
+							<div id="dvTable"></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<!--===============================================================================================-->
+	<script src="javascripts/films.js"></script>
+
+</body>
+
+</html>
